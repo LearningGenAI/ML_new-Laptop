@@ -1,0 +1,37 @@
+base:
+  project: ehr_mlops
+  random_state: 30
+  target_col: SOURCE
+
+data_source: 
+  s3_source: data/raw/EHR_processed.csv
+
+load_data: 
+  raw_dataset_csv: data/raw/EHR_processed.csv
+
+split_data:
+  train_path: data/processed/train_EHR.csv
+  test_path: data/processed/test_EHR.csv
+  test_size: 0.2
+
+estimators:
+  ElasticNet:
+     Params:
+       alpha: 1
+       l1_ratio: 0.9
+
+#model_dir: models/models.joblib
+
+reports:
+  params: reports/params.json
+  score: reports/score.json
+
+mlflow_config:
+  artificats_dir: artifacts
+  experiment_name: ElasticNet_now
+  run_name: mlops
+  registered_model_name: ElasticNet_now
+  remote_server_uri: http://127.0.0.1:5000
+
+model_dir:
+  model_dir: models/models.joblib
