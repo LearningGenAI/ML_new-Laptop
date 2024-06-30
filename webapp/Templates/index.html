@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+</head>
+<body>
+    <h1>Enter Your Data</h1>
+    <form action="{% url 'result' %}" method="get">
+        <label for="HAEMATOCRIT">HAEMATOCRIT:</label>
+        <input type="text" id="HAEMATOCRIT" name="HAEMATOCRIT"><br><br>
+        <label for="HAEMOGLOBIN">HAEMOGLOBIN:</label>
+        <input type="text" id="HAEMOGLOBIN" name="HAEMOGLOBIN"><br><br>
+        <label for="ERYTHROCYTE">ERYTHROCYTE:</label>
+        <input type="text" id="ERYTHROCYTE" name="ERYTHROCYTE"><br><br>
+        <label for="LEUCOCYTE">LEUCOCYTE:</label>
+        <input type="text" id="LEUCOCYTE" name="LEUCOCYTE"><br><br>
+        <label for="THROMBOCYTE">THROMBOCYTE:</label>
+        <input type="text" id="THROMBOCYTE" name="THROMBOCYTE"><br><br>
+        <label for="MCH">MCH:</label>
+        <input type="text" id="MCH" name="MCH"><br><br>
+        <label for="MCHC">MCHC:</label>
+        <input type="text" id="MCHC" name="MCHC"><br><br>
+        <label for="MCV">MCV:</label>
+        <input type="text" id="MCV" name="MCV"><br><br>
+        <label for="AGE">AGE:</label>
+        <input type="text" id="AGE" name="AGE"><br><br>
+        <label for="sex">SEX (male/female):</label>
+        <input type="text" id="sex" name="sex"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
