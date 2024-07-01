@@ -14,7 +14,8 @@ def index(request):
 
 # Stage 5: Modification of Views.py file in Django. 
 def result(request):
-    model = joblib.load("models.joblib")  # We need to call the ML model here
+    model_path = os.path.join(os.path.dirname(__file__), '../models/models.joblib')
+    model = joblib.load(model_path)  # We need to call the ML model here
 
     ############### Codes to get sex column in text #########
     sex_input = request.GET['sex'].lower() 
